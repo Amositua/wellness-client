@@ -328,7 +328,7 @@ export default function HospitalProfileEdit({ match }) {
             color="primary"
             onClick={() => {
               axios
-                .post(`https://equal-yoke-touted-vein-production.pipops.app/api/hospital/profile/edit/${match.params.id}`, {
+                .post(`https://equal-yoke-touted-vein-production.pipeops.app/api/hospital/profile/edit/${match.params.id}`, {
                   updated: values,
                 })
                 .then((res) => {

@@ -30,7 +30,7 @@ export default function Home() {
   };
   useEffect(() => {
     axios
-      .get("https://equal-yoke-touted-vein-production.pipops.app/api/hospital/all")
+      .get("https://equal-yoke-touted-vein-production.pipeops.app/api/hospital/all")
       .then((res) => {
         if (res.status !== 200) {
           console.log(res.statusText);

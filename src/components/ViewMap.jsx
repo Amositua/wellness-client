@@ -5,7 +5,7 @@ import { Paper, Typography, Button } from "@material-ui/core";
 import image from "../assets/map.svg";
 import { Link } from "react-router-dom";
 const ViewMap = () => {
-  const API_URL = "https://equal-yoke-touted-vein-production.pipops.app/api/hospital/all";
+  const API_URL = "https://equal-yoke-touted-vein-production.pipeops.app/api/hospital/all";
   const [data, setData] = React.useState([]);
   const [loading, setLoading] = React.useState(true);
   React.useEffect(() => {

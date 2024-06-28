@@ -40,7 +40,7 @@ export default function FormDialog({ props }) {
     setOpen(true);
   };
   const submitBooking = () => {
-    Axios.post("https://equal-yoke-touted-vein-production.pipops.app/api/booking/new", {
+    Axios.post("https://equal-yoke-touted-vein-production.pipeops.app/api/booking/new", {
       bookingTime: time,
       hospitalID: props.hospitalID,
       userID: props.userID,

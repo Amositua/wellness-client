@@ -67,7 +67,7 @@ export default function LetterAvatars({ match }) {
 
   useEffect(() => {
     axios
-      .get(`https://equal-yoke-touted-vein-production.pipops.app/api/hospital/profile/${match.params.id}`)
+      .get(`https://equal-yoke-touted-vein-production.pipeops.app/api/hospital/profile/${match.params.id}`)
       .then((res) => {
         if (res.status !== 200) return;
         const profile = res.data;

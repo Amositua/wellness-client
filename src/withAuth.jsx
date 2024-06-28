@@ -14,7 +14,7 @@ export default function withAuth(ComponentToProtect) {
 
     componentDidMount() {
       axios
-        .get("https://equal-yoke-touted-vein-production.pipops.app/api/checktoken", { withCredentials: true })
+        .get("https://equal-yoke-touted-vein-production.pipeops.app/api/checktoken", { withCredentials: true })
         .then((res) => {
           if (res.status === 200) {
             this.setState({ loading: false });
