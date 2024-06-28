@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useContext } from "react";
 import { Route, Switch } from "react-router-dom";
 import axios from "axios";
@@ -39,7 +40,7 @@ export default function App() {
       .catch((err) => {
         console.error(err);
       });
-  }, []);
+  }, [dispatch]);
   return (
     <>
       <Navbar />

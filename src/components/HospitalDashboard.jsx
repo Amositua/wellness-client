@@ -1,3 +1,5 @@
+/* eslint-disable eqeqeq */
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect, useContext } from "react";
 import Avatar from "@material-ui/core/Avatar";
 import { Paper, Icon, Tab } from "@material-ui/core";
@@ -60,7 +62,7 @@ export default function LetterAvatars({ match }) {
         setBookingLoading(false);
       })
       .catch((err) => console.error(err));
-  }, [getBookings]);
+  }, [getBookings, match.params.id]);
 
   return (
     <div className="profile-page-wrapper">

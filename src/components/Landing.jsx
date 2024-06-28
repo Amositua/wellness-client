@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { HMap } from "./Hmap";
 import HospitalCards from "./HospitalCard";

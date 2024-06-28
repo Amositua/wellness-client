@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useRef, useEffect, useState, useContext } from "react";
 import Button from "@material-ui/core/Button";
 import axios from "axios";

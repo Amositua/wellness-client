@@ -1,3 +1,5 @@
+/* eslint-disable eqeqeq */
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect, useContext } from "react";
 import Avatar from "@material-ui/core/Avatar";
 import { Paper, Icon } from "@material-ui/core";
@@ -89,7 +91,7 @@ export default function LetterAvatars({ match }) {
         setCommentLoading(false);
       })
       .catch((err) => console.error(err));
-  }, [getcomment]);
+  }, [getcomment, match.params.id]);
 
   // console.log(state);
 
