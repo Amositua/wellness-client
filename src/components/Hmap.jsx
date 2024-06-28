@@ -7,7 +7,6 @@ import {
   DialogActions,
   DialogTitle,
   Button,
-  Link,
 } from "@material-ui/core";
 import HospitalTable from "./HospitalTable";
 import { NavLink } from 'react-router-dom';
@@ -59,9 +58,9 @@ export const HMap = (props) => {
       pixelRatio: window.devicePixelRatio || 1,
     });
 
-    const behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+    // const behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
 
-    const ui = H.ui.UI.createDefault(map, defaultLayers);
+    // const ui = H.ui.UI.createDefault(map, defaultLayers);
 
     const success = (position) => {
       const lat = position.coords.latitude;

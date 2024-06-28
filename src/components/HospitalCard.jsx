@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function HospitalCards({ props }) {
-  const { name, desc, address, image, link, data } = props;
+  const { image, data } = props;
   console.log(props);
   const classes = useStyles();
 

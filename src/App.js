@@ -1,5 +1,5 @@
-import React, { useEffect, useContext, useState } from "react";
-import { Link, Route, Switch } from "react-router-dom";
+import React, { useEffect, useContext } from "react";
+import { Route, Switch } from "react-router-dom";
 import axios from "axios";
 import Home from "./components/Home";
 import UserAuth from "./components/UserAuth";

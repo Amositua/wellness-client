@@ -3,8 +3,6 @@ import HospitalCard from "./HospitalCard";
 import image1 from "../assets/hospital1.svg";
 import image2 from "../assets/hospital2.svg";
 import image3 from "../assets/hospital3.svg";
-import Select from "@material-ui/core/Select";
-import { Typography } from "@material-ui/core";
 import axios from "axios";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Text from "./Text";
