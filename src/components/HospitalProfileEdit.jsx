@@ -19,6 +19,8 @@ import CreateIcon from "@material-ui/icons/Create";
 import TelephoneIcon from "@material-ui/icons/Phone";
 import image from "../assets/dashboard.svg";
 import { Alert } from "@material-ui/lab";
+import { Link } from "react-router-dom";
+
 
 export default function HospitalProfileEdit() {
   const { id } = useParams();
@@ -31,15 +33,15 @@ export default function HospitalProfileEdit() {
     telephone: "",
     description: "",
     beds: 0,
-    isAcceptingCovidPatients: true,
-    isAcceptingNonCovidPatients: true,
-    isCovidDedicated: true,
+    IsAcceptingEmergencyPatients: true,
+    IsAcceptingRoutineAdmissions: true,
+    SpecialtyServicesOffered: true,
     isOfferingFullMedicalCare: true,
     isVerified: true,
-    staffCount: 0,
-    testsAvailable: 0,
-    totalPatients: 0,
-    ventilatorCount: 0,
+    NumberOfMedicalStaff: 0,
+    AvailableTestingKits: 0,
+    CurrentPatientCount: 0,
+    AvailableVentilators: 0,
   });
   const [trigger, toggleTrigger] = useState(false);
   const [state, dispatch] = useContext(Context);
@@ -52,15 +54,15 @@ export default function HospitalProfileEdit() {
         telephone,
         description,
         beds,
-        isAcceptingCovidPatients,
-        isAcceptingNonCovidPatients,
-        isCovidDedicated,
+        IsAcceptingEmergencyPatients,
+        IsAcceptingRoutineAdmissions,
+        SpecialtyServicesOffered,
         isOfferingFullMedicalCare,
         isVerified,
-        staffCount,
-        testsAvailable,
-        totalPatients,
-        ventilatorCount,
+        NumberOfMedicalStaff,
+        AvailableTestingKits,
+        CurrentPatientCount,
+        AvailableVentilators,
       } = state.hospitalData;
       setValues({
         email,
@@ -69,15 +71,15 @@ export default function HospitalProfileEdit() {
         telephone,
         description,
         beds,
-        isAcceptingCovidPatients,
-        isAcceptingNonCovidPatients,
-        isCovidDedicated,
+        IsAcceptingEmergencyPatients,
+        IsAcceptingRoutineAdmissions,
+        SpecialtyServicesOffered,
         isOfferingFullMedicalCare,
         isVerified,
-        staffCount,
-        testsAvailable,
-        totalPatients,
-        ventilatorCount,
+        NumberOfMedicalStaff,
+        AvailableTestingKits,
+        CurrentPatientCount,
+        AvailableVentilators,
       });
     }
   }, [state.hospitalData, trigger]);
@@ -197,9 +199,9 @@ export default function HospitalProfileEdit() {
                 <TextField
                   label="Ventilator Count"
                   InputProps={{
-                    name: "ventilatorCount",
+                    name: "AvailableVentilators",
                   }}
-                  value={values.ventilatorCount}
+                  value={values.AvailableVentilators}
                   onChange={handleOnchange}
                   type="number"
                 />
@@ -219,9 +221,9 @@ export default function HospitalProfileEdit() {
                 <TextField
                   label="Tests Available"
                   InputProps={{
-                    name: "testsAvailable",
+                    name: "AvailableTestingKits",
                   }}
-                  value={values.testsAvailable}
+                  value={values.AvailableTestingKits}
                   onChange={handleOnchange}
                   type="number"
                 />
@@ -232,18 +234,18 @@ export default function HospitalProfileEdit() {
                 <TextField
                   label="Total Patients"
                   InputProps={{
-                    name: "totalPatients",
+                    name: "CurrentPatientCount",
                   }}
-                  value={values.totalPatients}
+                  value={values.CurrentPatientCount}
                   onChange={handleOnchange}
                   type="number"
                 />
                 <TextField
                   label="Total Staff"
                   InputProps={{
-                    name: "staffCount",
+                    name: "NumberOfMedicalStaff",
                   }}
-                  value={values.staffCount}
+                  value={values.NumberOfMedicalStaff}
                   onChange={handleOnchange}
                   type="number"
                 />
@@ -261,42 +263,42 @@ export default function HospitalProfileEdit() {
           >
             <div>
               <Typography variant="body1" display="block">
-                Is this a COVID dedicated hospital?{" "}
+              Specialty Services Offered?{" "}
                 <Checkbox
                   onChange={handleOnCheckboxchange}
-                  checked={values.isCovidDedicated}
+                  checked={values.SpecialtyServicesOffered}
                   color="primary"
                   inputProps={{
                     "aria-label": "secondary checkbox",
-                    name: "isCovidDedicated",
+                    name: "SpecialtyServicesOffered",
                   }}
                 />
               </Typography>
             </div>
             <div>
               <Typography variant="body1" display="block">
-                Is this accepting COVID patients?
+              Is Accepting Emergency Patients?
                 <Checkbox
                   onChange={handleOnCheckboxchange}
-                  checked={values.isAcceptingCovidPatients}
+                  checked={values.IsAcceptingEmergencyPatients}
                   color="primary"
                   inputProps={{
                     "aria-label": "secondary checkbox",
-                    name: "isAcceptingCovidPatients",
+                    name: "IsAcceptingEmergencyPatients",
                   }}
                 />
               </Typography>
             </div>
             <div>
               <Typography variant="body1" display="block">
-                Is this accepting non-COVID patients?
+              Is Accepting Routine Admissions?
                 <Checkbox
                   onChange={handleOnCheckboxchange}
-                  checked={values.isAcceptingNonCovidPatients}
+                  checked={values.IsAcceptingRoutineAdmissions}
                   color="primary"
                   inputProps={{
                     "aria-label": "secondary checkbox",
-                    name: "isAcceptingNonCovidPatients",
+                    name: "IsAcceptingRoutineAdmissions",
                   }}
                 />
               </Typography>
@@ -324,6 +326,7 @@ export default function HospitalProfileEdit() {
             alignItems: "center",
           }}
         >
+          <Link to="/">
           <Button
             variant="outlined"
             color="primary"
@@ -348,6 +351,7 @@ export default function HospitalProfileEdit() {
           >
             Update
           </Button>
+          </Link>
           <Snackbar open={open} autoHideDuration={4000} onClose={handleClose}>
             <Alert onClose={handleClose} severity="success">
               Changes has been updated

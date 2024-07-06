@@ -41,62 +41,62 @@ export default function CustomizedTables({ props }) {
         <TableBody>
           <StyledTableRow>
             <StyledTableCell component="th" scope="row">
-              Beds remaining
+            Available Beds
             </StyledTableCell>
-            <StyledTableCell align="right">{data.beds}</StyledTableCell>
+            <StyledTableCell align="right">{56}</StyledTableCell>
           </StyledTableRow>
           <StyledTableRow>
             <StyledTableCell component="th" scope="row">
-              Tests Available
+            Available Testing Kits
             </StyledTableCell>
             <StyledTableCell align="right">
-              {data.testsAvailable}
+              {24}
             </StyledTableCell>
           </StyledTableRow>
           <StyledTableRow>
             <StyledTableCell component="th" scope="row">
-              Is Accepting COVID Patient?
+            Accepting Emergency Cases?
             </StyledTableCell>
             <StyledTableCell align="right">
-              {data.isAcceptingCovidPatients ? "Yes" : "No"}
+              {data.AcceptingEmergencyCases ? "No": "Yes"}
             </StyledTableCell>
           </StyledTableRow>
           <StyledTableRow>
             <StyledTableCell component="th" scope="row">
-              Is Accepting Non COVID Patient?
+            Accepting Routine Admissions? 
             </StyledTableCell>
             <StyledTableCell align="right">
-              {data.isAcceptingNonCovidPatients ? "Yes" : "No"}
+              {data.AcceptingRoutineAdmissions ?  "No": "Yes"}
             </StyledTableCell>
           </StyledTableRow>
           <StyledTableRow>
             <StyledTableCell component="th" scope="row">
-              Is this COVID dedicated Hospital?
+            Specialty Services Offered
             </StyledTableCell>
             <StyledTableCell align="right">
-              {data.isCovidDedicated ? "Yes" : "No"}
+              {data.SpecialtyServicesOffered ?  "No": "Yes"}
             </StyledTableCell>
           </StyledTableRow>
           <StyledTableRow>
             <StyledTableCell component="th" scope="row">
-              Staff Count
+            Number of Medical Staff
             </StyledTableCell>
-            <StyledTableCell align="right">{data.staffCount}</StyledTableCell>
+            <StyledTableCell align="right">{26}</StyledTableCell>
           </StyledTableRow>
           <StyledTableRow>
             <StyledTableCell component="th" scope="row">
-              Total Patients
+            Current Patient Count
             </StyledTableCell>
             <StyledTableCell align="right">
-              {data.totalPatients}
+              {23}
             </StyledTableCell>
           </StyledTableRow>
           <StyledTableRow>
             <StyledTableCell component="th" scope="row">
-              Total Ventilators
+            Available Ventilators
             </StyledTableCell>
             <StyledTableCell align="right">
-              {data.ventilatorCount}
+              {15}
             </StyledTableCell>
           </StyledTableRow>
         </TableBody>

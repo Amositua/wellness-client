@@ -38,7 +38,7 @@ const Dashboard = () => {
           }}
           display="block"
         >
-          Welcome to the Wellness!
+          Welcome to Wellness!
         </Typography>
       </div>
       <div
@@ -50,9 +50,9 @@ const Dashboard = () => {
           paddingBottom: 80,
         }}
       >
-        <Link to="/map">
+        <Link to="/questioniare">
           <Button variant="outlined" color="primary">
-            View Map
+            Take questioniare
           </Button>
         </Link>
       </div>

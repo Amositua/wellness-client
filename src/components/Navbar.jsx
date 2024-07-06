@@ -136,7 +136,8 @@ const useStyles = makeStyles((theme) => ({
   },
   logo: {
     marginRight: theme.spacing(1),
-    height: '30px'
+    height: '60px',
+    width: '70px'
   },
   flex: {
     display: 'flex',

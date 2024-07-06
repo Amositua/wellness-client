@@ -10,6 +10,7 @@ import HospitalProfileEdit from "./components/HospitalProfileEdit";
 import HospitalDashboard from "./components/HospitalDashboard";
 import Dashboard from "./components/Landing";
 import ViewMap from "./components/ViewMap";
+import QuestionnaireForm from "./components/QuestionnaireForm";
 import { Context } from "./Store";
 
 export default function App() {
@@ -46,6 +47,7 @@ export default function App() {
       <Navbar />
       <Routes>
         <Route path="/map" element={<ViewMap />} />
+        <Route path="/questioniare" element={<QuestionnaireForm />} />
         <Route path="/hospital/all" element={<Home />} />
         <Route path="/user/auth" element={<UserAuth />} />
         <Route path="/" element={<Dashboard />} />
@@ -53,7 +55,7 @@ export default function App() {
         <Route path="/hospital/profile/:id" element={<HospitalProfile />} />
         <Route path="/hospital/dashboard/:id" element={<HospitalDashboard />} />
         <Route path="/hospital/profile/edit/:id" element={<HospitalProfileEdit />} />
-        <Route path="*" element={<div>404 Not Found</div>} />
+        {/* <Route path="*" element={<div>404 Not Found</div>} /> */}
       </Routes>
     </>
   );
